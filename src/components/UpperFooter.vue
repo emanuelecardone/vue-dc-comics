@@ -2,6 +2,8 @@
     <section class="upper_footer_wrapper">
         <div class="my_container">
             <div class="upper_footer_subwrapper left">
+                <!-- La classe dinamica ha il senso di settare height 100% solo per le liste 3 e 4, in modo da settare 65 35 per le prime 2 e,
+                 col flex column e wrap, far si che solo le prime 2 stiano nella stessa col -->
                 <div v-for="(list, listIndex) in footerLists" :key="listIndex" class="footer_list_wrapper" :class="{'fixed_footer_up_height': listIndex === 0, 'fixed_footer_down_height': listIndex === 1, 'fixed_footer_full_height': listIndex > 1}">
                     <div v-if="footerLists.length > 0" class="footer_list_subwrapper">
                         <h2>{{list.title}}</h2>
