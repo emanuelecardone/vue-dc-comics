@@ -54,8 +54,10 @@ export default {
     
     .prefooter_section{
         width: 100%;
+        height: 60%;
+        display: flex;
+        align-items: center;
         background-color: $primary_color;
-        padding: 4rem;
 
         ul{
             @include inline_ul;
@@ -68,7 +70,7 @@ export default {
                 gap: 15px;
 
                 img{
-                    width: 45px;
+                    width: 40px;
                 }
                 a{
                     color: white;

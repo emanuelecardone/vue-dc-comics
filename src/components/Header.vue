@@ -82,7 +82,7 @@ export default {
 
     header{
         width: 100%;
-        height: 120px;
+        height: $head_foot_height;
         
         .my_container{
             display: flex;
@@ -109,7 +109,7 @@ export default {
                 }
 
                 a{
-                    color: $secondary_color;                    
+                    color: $tertiary_color;                    
                 }
             }
         }

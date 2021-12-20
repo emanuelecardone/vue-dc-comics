@@ -11,3 +11,8 @@
     max-width: 1400px;
     margin: auto;
 }
+
+@mixin common_bg{
+    background-size: cover;
+    background-repeat: no-repeat;
+}
