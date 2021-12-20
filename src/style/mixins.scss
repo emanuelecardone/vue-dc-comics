@@ -1,6 +1,13 @@
 @mixin inline_ul {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     text-transform: uppercase;
     font-weight: bolder;
+}
+
+@mixin common_container{
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
 }

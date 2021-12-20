@@ -1,12 +1,14 @@
 <template>
     <header>
-        <img :src="require('../assets/img/' + logoSrc)" alt="Logo DC">
+        <div class="my_container">
+            <img :src="require('../assets/img/' + logoSrc)" alt="Logo DC">
 
-        <ul v-if="headerLinks.length > 0">
-            <li v-for="(link, index) in headerLinks" :key="index" :class="{'current': index === currentItem}">
-                <a href="#">{{link.text}}</a> 
-            </li>
-        </ul>
+            <ul v-if="headerLinks.length > 0">
+                <li v-for="(link, index) in headerLinks" :key="index" :class="{'current': index === currentItem}">
+                    <a href="#">{{link.text}}</a> 
+                </li>
+            </ul>
+        </div>
     </header>
 </template>
 
@@ -79,10 +81,14 @@ export default {
 @import '../style/mixins.scss';
 
     header{
+        width: 100%;
         height: 120px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        
+        .my_container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
         img{
             width: 80px;
