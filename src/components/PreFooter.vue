@@ -4,7 +4,7 @@
             <ul v-if="prefooterLinks.length > 0">
                 <li v-for="(link, index) in prefooterLinks" :key="index">
                     <img :src="require('../assets/img/' + link.img)" :alt="'Immagine di' + link.text">
-                    <a :href="link.url">{{link.text}}</a>
+                    <a @click.prevent :href="link.url">{{link.text}}</a>
                 </li>
             </ul>   
         </div>
@@ -70,7 +70,7 @@ export default {
                 gap: 15px;
 
                 img{
-                    width: 40px;
+                    width: 45px;
                 }
                 a{
                     color: white;

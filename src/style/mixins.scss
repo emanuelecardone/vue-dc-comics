@@ -16,3 +16,9 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+@mixin between_spacing{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

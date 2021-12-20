@@ -9,7 +9,7 @@
                         <h2>{{list.title}}</h2>
                         <ul>
                             <li v-for="(link, linkIndex) in footerLists[listIndex].links" :key="linkIndex">
-                                <a :href="link.url">{{link.name}}</a>
+                                <a @click.prevent :href="link.url">{{link.name}}</a>
                             </li>
                         </ul>
                     </div>

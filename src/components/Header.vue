@@ -5,7 +5,7 @@
 
             <ul v-if="headerLinks.length > 0">
                 <li v-for="(link, index) in headerLinks" :key="index" :class="{'current': index === currentItem}">
-                    <a :href="link.url">{{link.text}}</a> 
+                    <a @click.prevent :href="link.url">{{link.text}}</a> 
                 </li>
             </ul>
         </div>
@@ -85,9 +85,7 @@ export default {
         height: $head_foot_height;
         
         .my_container{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            @include between_spacing;
         }
 
         img{
