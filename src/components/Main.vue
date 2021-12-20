@@ -26,12 +26,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../style/mixins.scss';
+@import '../style/variables.scss';
 
-    main{
-        background-color: black;
-    }
     .empty_content_section{
+        background-color: $secondary_color;
         padding: 3rem;
         width: 100%;
 
