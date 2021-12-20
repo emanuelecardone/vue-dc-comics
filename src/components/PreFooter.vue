@@ -3,7 +3,8 @@
         <div class="my_container">
             <ul v-if="prefooterLinks.length > 0">
                 <li v-for="(link, index) in prefooterLinks" :key="index">
-                    <a href="#">Test</a>
+                    <img :src="require('../assets/img/' + link.img)" :alt="'Immagine di' + link.text">
+                    <a :href="link.url">{{link.text}}</a>
                 </li>
             </ul>   
         </div>
@@ -17,29 +18,29 @@ export default {
         return {
             prefooterLinks: [
                 {
-                    text: '',
-                    img: '',
-                    url: ''
+                    text: 'digital comics',
+                    img: 'buy-comics-digital-comics.png',
+                    url: '#'
                 },
                 {
-                    text: '',
-                    img: '',
-                    url: ''
+                    text: 'dc merchandise',
+                    img: 'buy-comics-merchandise.png',
+                    url: '#'
                 },
                 {
-                    text: '',
-                    img: '',
-                    url: ''
+                    text: 'subscription',
+                    img: 'buy-comics-subscriptions.png',
+                    url: '#'
                 },
                 {
-                    text: '',
-                    img: '',
-                    url: ''
+                    text: 'comic shop locator',
+                    img: 'buy-comics-shop-locator.png',
+                    url: '#'
                 },
                 {
-                    text: '',
-                    img: '',
-                    url: ''
+                    text: 'dc power visa',
+                    img: 'buy-dc-power-visa.svg',
+                    url: '#'
                 },
             ]
         };
@@ -58,9 +59,20 @@ export default {
 
         ul{
             @include inline_ul;
+            padding: 0 30px;
             
-            a{
-                color: white;
+            li{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 15px;
+
+                img{
+                    width: 45px;
+                }
+                a{
+                    color: white;
+                }
             }
         }
     }

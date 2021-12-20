@@ -5,7 +5,7 @@
 
             <ul v-if="headerLinks.length > 0">
                 <li v-for="(link, index) in headerLinks" :key="index" :class="{'current': index === currentItem}">
-                    <a href="#">{{link.text}}</a> 
+                    <a :href="link.url">{{link.text}}</a> 
                 </li>
             </ul>
         </div>
