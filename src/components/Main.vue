@@ -13,8 +13,8 @@ import PreFooter from './PreFooter.vue';
 export default {
     name: 'Main',
     components: {
-        PreFooter,
-        CurrentSeries
+        CurrentSeries,
+        PreFooter
     }
 }
 </script>

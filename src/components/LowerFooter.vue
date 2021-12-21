@@ -1,8 +1,8 @@
 <template>
-    <div class="lower_footer_wrapper w_100">
+    <div class="lower_footer_wrapper w_100 d_flex align_items_center">
         <div class="my_container">
             <a @click.prevent class="sign_up" href="#">sign-up now!</a>
-            <div class="lower_footer_right">
+            <div class="lower_footer_right d_flex align_items_center">
                 <h2 class="me_35">follow us</h2>
                 <ul v-if="linksList.length > 0">
                     <li v-for="(link, linkIndex) in linksList" :key="linkIndex">
@@ -53,8 +53,6 @@ export default {
 @import '../style/mixins.scss';
 
     .lower_footer_wrapper{
-        display: flex;
-        align-items: center;
         text-transform: uppercase;
         height: $head_foot_height;
         background-color: $tertiary_color;
@@ -68,8 +66,6 @@ export default {
                 color: white;
             }
             .lower_footer_right{
-                display: flex;
-                align-items: center;
                 
                 h2{
                     color: $primary_color;

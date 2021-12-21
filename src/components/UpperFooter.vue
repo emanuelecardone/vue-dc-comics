@@ -1,7 +1,7 @@
 <template>
     <section class="upper_footer_wrapper">
-        <div class="my_container h_100">
-            <div class="upper_footer_subwrapper left w_40 h_100">
+        <div class="my_container h_100 d_flex justify_content_between">
+            <div class="upper_footer_subwrapper left w_40 h_100 d_flex flex_column flex_wrap">
                 <!-- La classe dinamica ha il senso di settare height 100% solo per le liste 3 e 4, in modo da settare 65 35 per le prime 2 e,
                  col flex column e wrap, far si che solo le prime 2 stiano nella stessa col -->
                 <div v-for="(list, listIndex) in footerLists" :key="listIndex" class="footer_list_wrapper" :class="{'h_65': listIndex === 0, 'h_35': listIndex === 1, 'h_100': listIndex > 1}">
@@ -165,16 +165,11 @@ export default {
         @include common_bg;
         background-position: top;
         .my_container{
-            display: flex;
-            justify-content: space-between;
 
             .upper_footer_subwrapper{
 
                 &.left{
                     padding: 3rem 0;
-                    display: flex;
-                    flex-direction: column;
-                    flex-wrap: wrap;
 
                     .footer_list_wrapper{
 

@@ -1,11 +1,11 @@
 <template>
     <section class="current_series_wrapper w_100">
-        <div class="my_container h_100 pt_45 pb_125">
-            <a @click.prevent class="btn up fs_20" href="#">current series</a>
-            <div class="series_main_wrapper">
+        <div class="my_container h_100 pt_45 pb_125 position_relative">
+            <a @click.prevent class="btn up fs_20 position_absolute" href="#">current series</a>
+            <div class="series_main_wrapper d_flex flex_wrap">
                 <SingleSeries v-for="(series, index) in seriesList" :key="index" :seriesObject="series" />
             </div>
-            <a @click.prevent class="btn down fs_15" href="#">load more</a>
+            <a @click.prevent class="btn down fs_15 position_absolute" href="#">load more</a>
         </div>
     </section> 
 </template>
@@ -106,15 +106,9 @@ export default {
         background-color: #1c1c1c;
 
         .my_container{
-            position: relative;
 
-            .series_main_wrapper{
-                display: flex;
-                flex-wrap: wrap;
-            }
             .btn{
                 @include common_btn;
-                position: absolute;
 
                 &.up{
                     line-height: 20px;

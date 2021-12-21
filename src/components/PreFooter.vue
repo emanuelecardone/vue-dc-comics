@@ -1,8 +1,8 @@
 <template>
-    <section class="prefooter_section w_100 h_150p">
+    <section class="prefooter_section w_100 h_150p d_flex align_items_center">
         <div class="my_container">
-            <ul v-if="prefooterLinks.length > 0">
-                <li v-for="(link, index) in prefooterLinks" :key="index">
+            <ul v-if="prefooterLinks.length > 0" class="px_40">
+                <li v-for="(link, index) in prefooterLinks" :key="index" class="d_flex justify_content_between align_items_center">
                     <img class="w_50p h_70p" :src="require('../assets/img/' + link.img)" :alt="'Immagine di' + link.text">
                     <a @click.prevent :href="link.url">{{link.text}}</a>
                 </li>
@@ -53,18 +53,12 @@ export default {
 @import '../style/mixins.scss';
     
     .prefooter_section{
-        display: flex;
-        align-items: center;
         background-color: lighten($primary_color, 10%);
 
         ul{
             @include inline_ul;
-            padding: 0 30px;
             
             li{
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
                 gap: 15px;
 
                 &:last-child{

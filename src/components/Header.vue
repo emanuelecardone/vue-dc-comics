@@ -5,7 +5,7 @@
 
             <ul v-if="headerLinks.length > 0" class="h_100">
                 <li v-for="(link, index) in headerLinks" :key="index" class="h_100">
-                    <a @click.prevent :href="link.url" :class="{'current': index === currentItem}">{{link.text}}</a> 
+                    <a @click.prevent :href="link.url" class="d_inline_block" :class="{'current': index === currentItem}">{{link.text}}</a> 
                 </li>
             </ul>
         </div>
@@ -93,7 +93,6 @@ export default {
             li{ 
                 height: $head_foot_height;
                 a{  
-                    display: inline-block;
                     color: $tertiary_color;
                     line-height: calc($head_foot_height - 5px);
 
