@@ -73,7 +73,6 @@ export default {
                     img{   
                         transform: scaleX(1.2) scaleY(1.5);
                     }
-                    
                 }
                 a{
                     color: white;
