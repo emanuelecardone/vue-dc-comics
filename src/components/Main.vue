@@ -1,10 +1,6 @@
 <template>
     <main>
-        <div class="empty_content_section w_100 h_40">
-            <div class="my_container">
-                <h2> {{emptyContentText}} </h2>
-            </div>
-        </div>
+        <div class="banner_section w_100"></div>
         <PreFooter />
     </main>
 </template>
@@ -16,29 +12,21 @@ export default {
     name: 'Main',
     components: {
         PreFooter
-    },
-    data: function(){
-        return {
-            emptyContentText: '--> Content goes here <--'
-        };
     }
 }
 </script>
 
 <style lang="scss" scoped>
 @import '../style/variables.scss';
+@import '../style/mixins.scss';
 
     main{
         
-        .empty_content_section{
-            background-color: #1c1c1c;
-            display: flex;
-            align-items: center;
-
-            h2{
-                color: white;
-                font-size: 27.5px;
-            }
+        .banner_section{
+            height: $banner_height;
+            background-image: url('../assets/img/jumbotron.jpg');
+            @include common_bg;
+            background-position: top;
         }
     }
     
