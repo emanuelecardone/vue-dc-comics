@@ -29,8 +29,6 @@ export default {
 @import '../style/variables.scss';
 
     main{
-        /* Nell'inspector si vede una linea bianca a fine main che senza inspector non si vede */
-        height: $middle_height;
         
         .empty_content_section{
             background-color: #1c1c1c;

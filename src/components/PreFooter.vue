@@ -1,5 +1,5 @@
 <template>
-    <section class="prefooter_section w_100 h_60">
+    <section class="prefooter_section w_100 h_150p">
         <div class="my_container">
             <ul v-if="prefooterLinks.length > 0">
                 <li v-for="(link, index) in prefooterLinks" :key="index">

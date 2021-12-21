@@ -1,5 +1,5 @@
 <template>
-    <section class="upper_footer_wrapper">
+    <section class="upper_footer_wrapper h_500p">
         <div class="my_container h_100">
             <div class="upper_footer_subwrapper left w_40 h_100">
                 <!-- La classe dinamica ha il senso di settare height 100% solo per le liste 3 e 4, in modo da settare 65 35 per le prime 2 e,
@@ -160,7 +160,6 @@ export default {
 @import '../style/mixins.scss';
 
     .upper_footer_wrapper{
-        height: $middle_height;
         background-image: url('../assets/img/footer-bg.jpg');
         @include common_bg;
         background-position: top;
