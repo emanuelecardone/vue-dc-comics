@@ -1,17 +1,20 @@
 <template>
     <main>
         <div class="banner_section w_100"></div>
+        <CurrentSeries />
         <PreFooter />
     </main>
 </template>
 
 <script>
-import PreFooter from './PreFooter.vue'
+import CurrentSeries from './CurrentSeries.vue';
+import PreFooter from './PreFooter.vue';
 
 export default {
     name: 'Main',
     components: {
-        PreFooter
+        PreFooter,
+        CurrentSeries
     }
 }
 </script>
