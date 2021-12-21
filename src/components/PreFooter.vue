@@ -1,9 +1,9 @@
 <template>
-    <section class="prefooter_section">
+    <section class="prefooter_section w_100 h_60">
         <div class="my_container">
             <ul v-if="prefooterLinks.length > 0">
                 <li v-for="(link, index) in prefooterLinks" :key="index">
-                    <img :src="require('../assets/img/' + link.img)" :alt="'Immagine di' + link.text">
+                    <img class="w_50p h_70p" :src="require('../assets/img/' + link.img)" :alt="'Immagine di' + link.text">
                     <a @click.prevent :href="link.url">{{link.text}}</a>
                 </li>
             </ul>   
@@ -53,8 +53,6 @@ export default {
 @import '../style/mixins.scss';
     
     .prefooter_section{
-        width: 100%;
-        height: 60%;
         display: flex;
         align-items: center;
         background-color: lighten($primary_color, 10%);
@@ -69,8 +67,12 @@ export default {
                 align-items: center;
                 gap: 15px;
 
-                img{
-                    width: 45px;
+                &:last-child{
+
+                    img{
+                        transform: scaleY(1.5);
+                    }
+                    
                 }
                 a{
                     color: white;

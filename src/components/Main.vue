@@ -1,6 +1,6 @@
 <template>
     <main>
-        <div class="empty_content_section">
+        <div class="empty_content_section w_100 h_40">
             <div class="my_container">
                 <h2> {{emptyContentText}} </h2>
             </div>
@@ -34,8 +34,6 @@ export default {
         
         .empty_content_section{
             background-color: #1c1c1c;
-            height: 40%;
-            width: 100%;
             display: flex;
             align-items: center;
 

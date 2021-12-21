@@ -25,6 +25,7 @@ export default {
 @import './style/variables.scss';
 @import './style/mixins.scss';
 @import './style/general.scss';
+@import './style/size-space.scss';
 @import './style/utilities.scss';
 
 /* Sto facendo si che tutti i div con classe my_container abbiano massimo 1400px di width */

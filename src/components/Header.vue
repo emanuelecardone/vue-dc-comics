@@ -1,7 +1,7 @@
 <template>
-    <header>
+    <header class="w_100">
         <div class="my_container">
-            <img :src="require('../assets/img/' + logoSrc)" alt="Logo DC">
+            <img class="w_80p" :src="require('../assets/img/' + logoSrc)" alt="Logo DC">
 
             <ul v-if="headerLinks.length > 0">
                 <li v-for="(link, index) in headerLinks" :key="index" :class="{'current': index === currentItem}">
@@ -81,15 +81,10 @@ export default {
 @import '../style/mixins.scss';
 
     header{
-        width: 100%;
         height: $head_foot_height;
         
         .my_container{
             @include between_spacing;
-        }
-
-        img{
-            width: 80px;
         }
 
         ul{ 

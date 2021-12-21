@@ -1,12 +1,12 @@
 <template>
     <section class="upper_footer_wrapper">
-        <div class="my_container">
-            <div class="upper_footer_subwrapper left">
+        <div class="my_container h_100">
+            <div class="upper_footer_subwrapper left w_40 h_100">
                 <!-- La classe dinamica ha il senso di settare height 100% solo per le liste 3 e 4, in modo da settare 65 35 per le prime 2 e,
                  col flex column e wrap, far si che solo le prime 2 stiano nella stessa col -->
-                <div v-for="(list, listIndex) in footerLists" :key="listIndex" class="footer_list_wrapper" :class="{'fixed_footer_up_height': listIndex === 0, 'fixed_footer_down_height': listIndex === 1, 'fixed_footer_full_height': listIndex > 1}">
+                <div v-for="(list, listIndex) in footerLists" :key="listIndex" class="footer_list_wrapper" :class="{'h_65': listIndex === 0, 'h_35': listIndex === 1, 'h_100': listIndex > 1}">
                     <div v-if="footerLists.length > 0" class="footer_list_subwrapper">
-                        <h2>{{list.title}}</h2>
+                        <h2 class="mb_20">{{list.title}}</h2>
                         <ul>
                             <li v-for="(link, linkIndex) in footerLists[listIndex].links" :key="linkIndex">
                                 <a @click.prevent :href="link.url">{{link.name}}</a>
@@ -15,7 +15,7 @@
                     </div>
                 </div>
             </div>
-            <div class="upper_footer_subwrapper right">
+            <div class="upper_footer_subwrapper right w_40 h_100">
                 
             </div>
         </div>
@@ -165,13 +165,10 @@ export default {
         @include common_bg;
         background-position: top;
         .my_container{
-            height: 100%;
             display: flex;
             justify-content: space-between;
 
             .upper_footer_subwrapper{
-                width: 40%;
-                height: 100%;
 
                 &.left{
                     padding: 3rem 0;
@@ -181,19 +178,9 @@ export default {
 
                     .footer_list_wrapper{
 
-                        &.fixed_footer_up_height{
-                            height: 65%;
-                        }
-                        &.fixed_footer_down_height{
-                            height: 35%;
-                        }
-                        &.fixed_footer_full_height{
-                            height: 100%;
-                        }
                         h2{
                             color: white;
                             text-transform: uppercase;
-                            margin-bottom: 20px;
                         }
                         a{
                             color: $secondary_color;
