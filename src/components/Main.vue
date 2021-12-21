@@ -33,7 +33,7 @@ export default {
         height: $middle_height;
         
         .empty_content_section{
-            background-color: $tertiary_color;
+            background-color: #1c1c1c;
             height: 40%;
             width: 100%;
             display: flex;
