@@ -3,9 +3,9 @@
         <div class="my_container">
             <img class="w_80p" :src="require('../assets/img/' + logoSrc)" alt="Logo DC">
 
-            <ul v-if="headerLinks.length > 0">
-                <li v-for="(link, index) in headerLinks" :key="index" :class="{'current': index === currentItem}">
-                    <a @click.prevent :href="link.url">{{link.text}}</a> 
+            <ul v-if="headerLinks.length > 0" class="h_100">
+                <li v-for="(link, index) in headerLinks" :key="index" class="h_100">
+                    <a @click.prevent :href="link.url" :class="{'current': index === currentItem}">{{link.text}}</a> 
                 </li>
             </ul>
         </div>
@@ -81,7 +81,6 @@ export default {
 @import '../style/mixins.scss';
 
     header{
-        height: $head_foot_height;
         
         .my_container{
             @include between_spacing;
@@ -91,18 +90,18 @@ export default {
             @include inline_ul;
             gap: 1.5rem;
 
-            li{
-                line-height: 115px;
-                align-self: flex-start;
-                &.current{
-                    border-bottom: 5px solid $primary_color;
-                    a{
-                        color: $primary_color;
-                    }
-                }
+            li{ 
+                height: $head_foot_height;
+                a{  
+                    display: inline-block;
+                    color: $tertiary_color;
+                    line-height: calc($head_foot_height - 5px);
 
-                a{
-                    color: $tertiary_color;                    
+                    &.current{
+                        color: $primary_color;
+                        border-bottom: 5px solid $primary_color;
+                    }
+                
                 }
             }
         }

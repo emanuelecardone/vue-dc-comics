@@ -14,11 +14,6 @@ export default {
     components: {
         UpperFooter,
         LowerFooter
-    },
-    data: function(){
-        return {
-
-        };
     }
 }
 </script>

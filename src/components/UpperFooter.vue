@@ -184,7 +184,7 @@ export default {
                         }
                         a{
                             color: $secondary_color;
-                            line-height: 25px;
+                            line-height: 22.5px;
                         }
                     }   
                 }
