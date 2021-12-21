@@ -57,7 +57,7 @@ export default {
         height: 60%;
         display: flex;
         align-items: center;
-        background-color: $primary_color;
+        background-color: lighten($primary_color, 10%);
 
         ul{
             @include inline_ul;
