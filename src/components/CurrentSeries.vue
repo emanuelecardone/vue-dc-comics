@@ -1,6 +1,7 @@
 <template>
     <section class="current_series_wrapper w_100">
-        <div class="my_container h_100">
+        <div class="my_container h_100 pt_45 pb_25">
+            <a @click.prevent class="btn up" href="#">current series</a>
             <SingleSeries v-for="(series, index) in seriesList" :key="index" :seriesObject="series" />
         </div>
     </section> 
@@ -96,12 +97,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../style/mixins.scss';
+
     .current_series_wrapper{
         background-color: #1c1c1c;
 
         .my_container{
             display: flex;
             flex-wrap: wrap;
+            position: relative;
+
+            .btn{
+                @include common_btn;
+                &.up{
+                    position: absolute;
+                    font-size: 20px;
+                    line-height: 20px;
+                    top: -30px;
+                }
+            }
         }
     }
 </style>
