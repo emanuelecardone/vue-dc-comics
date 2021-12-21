@@ -69,8 +69,9 @@ export default {
 
                 &:last-child{
 
-                    img{
-                        transform: scaleY(1.5);
+                    /* Fix per la svg */
+                    img{   
+                        transform: scaleX(1.2) scaleY(1.5);
                     }
                     
                 }
