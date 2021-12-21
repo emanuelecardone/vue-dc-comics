@@ -98,7 +98,6 @@ export default {
 <style lang="scss" scoped>
     .current_series_wrapper{
         background-color: #1c1c1c;
-        height: 750px;
 
         .my_container{
             display: flex;
